@@ -1,0 +1,56 @@
+{
+  "upstream_commit": "a389166f6cf5da70a286b568c87695d4dcdce3a1",
+  "value_model_mode": "weighted",
+  "negative_scores_offset": 0.001,
+  "author_diversity": {
+    "enabled": true,
+    "decay": 0.5,
+    "floor": 0.25
+  },
+  "oon": {
+    "weight_factor": 0.75,
+    "topic_weight_factor": 0.5,
+    "deboost_in_network_replies_retweets": true
+  },
+  "video": {
+    "min_duration_ms": 10000,
+    "quoted_vqv_duration_check": false,
+    "vqv_viewer_follower_threshold": 10000
+  },
+  "weights": {
+    "favorite": 0.5,
+    "reply": 5.0,
+    "bidirectional_follow_reply_boost": 15.0,
+    "retweet": 1.0,
+    "photo_expand": 0.05,
+    "video_open": 0.05,
+    "click": 0.4,
+    "open_link": 0.2,
+    "profile_click": 0.0,
+    "vqv": 0.05,
+    "share": 2.0,
+    "share_via_dm": 5.0,
+    "share_via_copy_link": 20.0,
+    "dwell": 0.0,
+    "quote": 5.0,
+    "quoted_click": 0.05,
+    "quoted_vqv": 0.0,
+    "dwell_time": 0.004,
+    "click_dwell_time": 0.0,
+    "active_secs_5m_residual_norm": 0.0,
+    "follow_author": 4.0,
+    "post_unexplored": 0.02,
+    "not_interested": -43.2,
+    "block_author": -31.2,
+    "mute_author": -58.8,
+    "report": -234.0,
+    "not_dwelled": -0.02
+  },
+  "sources": [
+    "home-mixer/scorers/ranking_scorer.rs",
+    "home-mixer/params/param.rs",
+    "home-mixer/params/config.rs",
+    "home-mixer/util/candidates_util.rs",
+    "home-mixer/scorers/author_cold_start.rs"
+  ]
+}
